@@ -1,0 +1,32 @@
+(defpoll TIME :interval "12s"
+  `date "+%H:%M"`)
+
+(defpoll DATE :interval "1h"
+  `date "+%B %d"`)
+
+
+(defpoll BAT :interval "30s"
+  `echo "$(acpi | awk -F ' ' 'END {print $4}' | tr -d \%,)%"`)
+
+
+(defwidget info []
+  (box :orientation "horizontal"
+       :halign "center"
+    (label :class "time" :halign "start" :text "${DATE} ⸱ ${TIME} ⸱ ${BAT}")
+  )
+)
+
+(defwindow statusbar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "20px"
+                               :width "90%"
+                               :height "30px"
+                               :anchor "bottom center")
+           :stacking "bg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "desktop"
+           :wm-ignore false
+  (info)
+)
+
