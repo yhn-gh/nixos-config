@@ -22,8 +22,10 @@ in {
 
       animation = [
 	#"windows, 1, 1, default, popin 100%"
-	"windows, 0"
+	"windows, 0, 0, default, popin 0%"
 	#"fadeIn, 1, 6, default"
+	"fadeIn, 0"
+	"fadeOut, 0"
 	#"fadeOut, 1, 4, default"
 	"workspaces, 0"
       ];

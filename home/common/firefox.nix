@@ -81,6 +81,7 @@ in {
 	onepassword-password-manager
 	auto-tab-discard
 	darkreader
+	tab-session-manager
       ];
     };
     policies = {

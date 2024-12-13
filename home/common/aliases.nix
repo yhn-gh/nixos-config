@@ -8,5 +8,6 @@
     ya = "yazi";
     ze = "zellij attach --create main";
     zj = "zellij";
+    ra = "rust-analyzer";
   };
 }
