@@ -46,32 +46,33 @@ in {
       };
 
       userChrome = /* css */ ''
-		  
-	  #titlebar {
-	    appearance: none !important;
-	    height: 0px;
-	  }
+#titlebar {
+  appearance: none !important;
+height: 0px;
+}
 
-	  #titlebar > #toolbar-menubar {
-	    margin-top: 0px;
-	  }
+#titlebar > #toolbar-menubar {
+  margin-top: 0px;
+}
 
-	  #TabsToolbar {
-	    min-width: 0 !important;
-	    min-height: 0 !important;
-	  }
+#TabsToolbar {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
 
-	  #TabsToolbar > .titlebar-buttonbox-container {
-	    display: block;
-	    position: absolute;
-	    top: 12px;
-	    left: 0px;
-	  }
+#TabsToolbar > .titlebar-buttonbox-container {
+display: block;
+position: absolute;
+top: 12px;
+left: 0px;
+}
 
-	  #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-	    display: none;
-	  }
-
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+display: none;
+}
+#sidebar-splitter {
+width: 2px !important;
+}
       '';
 
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -81,7 +82,7 @@ in {
 	onepassword-password-manager
 	auto-tab-discard
 	darkreader
-	tab-session-manager
+	duckduckgo-privacy-essentials
       ];
     };
     policies = {

@@ -1,6 +1,5 @@
 {
   imports = [
-  ./harpoon.nix
   ./telescope.nix
   ./toggleterm.nix
   ./lsp.nix
