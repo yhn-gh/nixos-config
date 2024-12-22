@@ -13,7 +13,7 @@
     ./syncthing.nix
     ./python.nix
     ./openssh.nix
-    ./fonts.nix
+    ./fonts
     ./tmpfiles.nix
   ];
 
