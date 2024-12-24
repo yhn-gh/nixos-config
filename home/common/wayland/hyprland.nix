@@ -5,12 +5,22 @@
 }: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprctl setcursor Bibata-Modern-Classic 16 &
+    ${lib.getBin pkgs.kime}/bin/kime-wayland &
     eww open statusbar
   '';
 in {
   home.packages = with pkgs; [
     pkgs.bibata-cursors
   ];
+
+  # https://github.com/Riey/kime/discussions/653
+  home.sessionVariables = {
+      XDG_CURRENT_DESKTOP="Hyprland";
+      GTK_IM_MODULE="kime";
+      QT_IM_MODULE="kime";
+      XMODIFIERS="@im=kime";
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -18,6 +28,7 @@ in {
 
       exec-once = ''${startupScript}/bin/start'';
 
+      #https://github.com/Riey/kime/discussions/653
       monitor = ", preferred, auto, 1.33333";
 
       animation = [
@@ -95,8 +106,9 @@ in {
 
       device = {
 	name = "at-translated-set-2-keyboard";
-	kb_layout="us";
+	kb_layout="kr";
 	#kb_variant="colemak_dh";
+	kb_options="korean:ralt_hangul";
       };
 
     };

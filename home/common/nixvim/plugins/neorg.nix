@@ -22,6 +22,7 @@
 	    config = {
 	      workspaces = {
 		home = "~/notes/home";
+		edu = "~/notes/edu";
 	      };
 	      default_workspace = "home";
 	    };
