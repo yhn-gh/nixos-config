@@ -19,8 +19,6 @@ in {
     enable = true;
     profiles.yhn = {
       isDefault = true;
-
-
       search = {
 	default = "DuckDuckGo";
 	force = true;

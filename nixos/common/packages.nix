@@ -23,5 +23,6 @@
     cmake
     ffmpeg-headless
     lazygit
+    anki
  ];
 }
