@@ -23,6 +23,7 @@
     cmake
     ffmpeg-headless
     lazygit
+    fastfetch
     anki
  ];
 }

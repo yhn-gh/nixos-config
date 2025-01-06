@@ -77,10 +77,11 @@ width: 2px !important;
 	ublock-origin
 	greasemonkey
 	tree-style-tab
-	onepassword-password-manager
 	auto-tab-discard
 	darkreader
 	duckduckgo-privacy-essentials
+	multi-account-containers
+	onepassword-password-manager
       ];
     };
     policies = {

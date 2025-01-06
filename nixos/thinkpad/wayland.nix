@@ -6,15 +6,21 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+#  programs.hyprland = {
+#    enable = true;
+#    xwayland.enable = true;
+#
+#    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+#  };
 
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  programs.sway = {
+    enable = true;
   };
 
   environment.systemPackages = [
-    pkgs.kitty
+#   pkgs.kitty
+    pkgs.alacritty
+    pkgs.bemenu
   ];
 
   services = {
@@ -23,7 +29,8 @@
         enable = true;
         wayland.enable = true;
       };
-      defaultSession = "hyprland";
+#      defaultSession = "hyprland";
+      defaultSession = "sway";
     };
   };
 }

@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./wofi.nix
-    ./hyprland.nix
+    ./sway.nix
     ./eww.nix
   ];
 
