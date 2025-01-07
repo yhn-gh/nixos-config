@@ -11,7 +11,7 @@
 
       neorg = {
 	enable = true;
-	modules = {
+	settings.load = {
 	  "core.defaults" = {
 	    __empty = null;
 	  };

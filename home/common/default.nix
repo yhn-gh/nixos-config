@@ -11,11 +11,12 @@
     ./nixvim
     ./firefox.nix
     ./git.nix
-    ./kitty.nix
     ./yazi.nix
     ./aliases.nix
     ./obs.nix
     ./zellij.nix
+    ./alacritty.nix
+    ./fontconfig.nix
   ];
 
   programs = {

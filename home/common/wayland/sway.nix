@@ -20,13 +20,18 @@ in {
   wayland.windowManager.sway = {
     enable = true;
     config = {
+
       bars = [];
       modifier = "Mod4";
-      window.titlebar = false;
+      window = {
+	titlebar = false;
+	border = 0;
+      };
 
       startup = [
 	{ command = "${lib.getBin pkgs.kime}/bin/kime-wayland"; }
 	{ command = "${lib.getExe pkgs.eww} open statusbar"; }
+	{ command = "swaymsg seat seat0 xcursor_theme Bibata-Modern-Classic 16"; }
       ];
 
       keybindings = {
@@ -42,7 +47,7 @@ in {
 	"XF86MonBrightnessUp" = "exec light -A 1";
 	"XF86MonBrightnessDown" = "exec light -U 1";
 
-	"PRINT" = "exec grim - | wl-copy";
+	"Print" = "exec grim - | wl-copy";
 	}
       // ( lib.listToAttrs ( lib.flatten (lib.genList (i: [
 	{
@@ -67,7 +72,7 @@ in {
 
       output = {
 	eDP-1 = {
-	  scale = "1.33333";
+	  scale = "1.3333";
 	};
       };
 
@@ -78,6 +83,12 @@ in {
   gtk.theme = {
     name = "Adwaita-dark";
     package = pkgs.gnome-themes-extra;
+  };
+
+  gtk.cursorTheme = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 16;
   };
 
 }

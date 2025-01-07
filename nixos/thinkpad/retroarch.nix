@@ -3,7 +3,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    (retroarch.override {
+    (retroarch.overrideAttrs {
       cores = with libretro; [
 	beetle-psx
 	pcsx2

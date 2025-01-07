@@ -5,9 +5,7 @@
 } : {
   home = {
     packages = with pkgs; [
-      rustc
-      cargo
-      rustfmt
+      rust-bin.stable.latest.default
     ];
   };
 }

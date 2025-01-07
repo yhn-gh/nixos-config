@@ -14,7 +14,26 @@
 	  inputs.home-manager.nixosModules.home-manager
 	  {
 	    nixpkgs.overlays = [
-	      inputs.nur.overlay
+	      inputs.nur.overlays.default
+	      inputs.rust-overlay.overlays.default
+
+	      # https://github.com/Riey/kime/issues/688
+	      (
+		final: prev:
+		let
+		  rustChannel = inputs.rust-overlay.packages.x86_64-linux.rust_1_81_0;
+		in
+		{
+		  kime = prev.kime.override {
+		    rustPlatform = prev.makeRustPlatform {
+		      rustc = rustChannel;
+		      cargo = rustChannel;
+		    };
+		    rustc = rustChannel;
+		    cargo = rustChannel;
+		  };
+		}
+	      )
 	    ];
 	  }
 

@@ -7,6 +7,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,8 +27,6 @@
     };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
-    hyprland.url = "github:hyprwm/Hyprland";
 
     agenix = {
       url = "github:ryantm/agenix";
