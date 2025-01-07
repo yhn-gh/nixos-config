@@ -5,7 +5,7 @@
   `date "+%B %d"`)
 
 
-(defpoll BAT :interval "30s"
+(defpoll BAT :interval "12s"
   `echo "$(acpi | awk -F ' ' 'END {print $4}' | tr -d \%,)%"`)
 
 

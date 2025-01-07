@@ -7,5 +7,12 @@
     jellyfin-media-player
     bluez
     prismlauncher
+
+    grim
+    slurp
+    wl-clipboard
+    mako
+    libnotify
+    satty
  ];
 }

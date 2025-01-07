@@ -2,7 +2,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-#      font = {
+      font = {
 #	normal = {
 #	  family = "Berkeley Mono";
 #	};
@@ -15,9 +15,9 @@
 #	bold_italic = {
 #	  family = "Berkeley Mono Bold Italic";
 #	};
-#	size = 14;
-#	builtin_box_drawing = false;
-#      };
+	size = 13;
+	builtin_box_drawing = false;
+      };
     };
   };
 }

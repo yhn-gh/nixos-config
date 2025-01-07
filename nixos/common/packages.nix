@@ -1,12 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    grim
-    slurp
-    wl-clipboard
-    mako
-    libnotify
-
-    wget
+    uget
 
     hypridle
     hyprpaper

@@ -5,6 +5,7 @@
   ...
 }: let
   modifier = config.wayland.windowManager.sway.config.modifier;
+  sattyConfig = ./satty.toml;
 in {
   home.packages = with pkgs; [
     pkgs.bibata-cursors
@@ -31,12 +32,13 @@ in {
       startup = [
 	{ command = "${lib.getBin pkgs.kime}/bin/kime-wayland"; }
 	{ command = "${lib.getExe pkgs.eww} open statusbar"; }
-	{ command = "swaymsg seat seat0 xcursor_theme Bibata-Modern-Classic 16"; }
+	{ command = "swaymsg seat seat0 xcursor_theme Bibata-Modern-Classic 16"; always = true; }
       ];
 
       keybindings = {
 	"${modifier}+Return" = "exec ${lib.getExe pkgs.alacritty}";
 	"${modifier}+q" = "kill";
+	"${modifier}+f" = "floating toggle";
 	"${modifier}+r" = "exec ${lib.getBin pkgs.bemenu}/bin/bemenu-run --bottom --ignorecase --list \"5 up\"";
 
 	"XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
@@ -48,6 +50,7 @@ in {
 	"XF86MonBrightnessDown" = "exec light -U 1";
 
 	"Print" = "exec grim - | wl-copy";
+	"Shift+Print" = "exec grim -g \"$(slurp -o -r -c '#ff0000ff')\" -t ppm - | satty --config ${sattyConfig} --filename -";
 	}
       // ( lib.listToAttrs ( lib.flatten (lib.genList (i: [
 	{
