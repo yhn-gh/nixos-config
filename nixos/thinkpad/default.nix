@@ -15,6 +15,7 @@
     ./udev.nix
     ./retroarch.nix
     ./gamescope.nix
+    ./xdg-portal-wlr.nix
 
     ./wireguard
 
