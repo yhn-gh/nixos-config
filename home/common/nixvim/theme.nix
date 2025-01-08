@@ -3,9 +3,12 @@
   ...
 }: {
   programs.nixvim = {
-    colorschemes.base16 = {
+    colorschemes.kanagawa = {
       enable = true;
-      colorscheme = "black-metal";
+      settings = {
+	theme = "dragon";
+	background.dark = "dragon";
+      };
     };
   };
 }
