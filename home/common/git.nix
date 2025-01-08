@@ -9,7 +9,6 @@
     userEmail = "yhn@yhn.fyi";
     extraConfig = {
       core.editor = "nvim";
-      github.user = "teq98";
     };
   };
 }

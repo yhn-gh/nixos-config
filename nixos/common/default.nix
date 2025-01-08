@@ -6,7 +6,6 @@
   imports = [
     inputs.disko.nixosModules.disko
 
-    ./agenix.nix
     ./users.nix
     ./fish.nix
     ./packages.nix
@@ -15,6 +14,7 @@
     ./openssh.nix
     ./fonts
     ./tmpfiles.nix
+    ./sops.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -26,10 +26,6 @@
 
   
   time.timeZone = "Asia/Seoul";
-
-  environment.systemPackages = [
-    inputs.agenix.packages."${pkgs.system}".default
-  ];
 
   environment.variables = {
     EDITOR = "nvim";

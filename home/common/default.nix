@@ -37,7 +37,6 @@
     packages = with pkgs; [
       jq
       fd
-      pfetch
 
       discord
       

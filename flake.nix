@@ -28,14 +28,14 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    agenix = {
-      url = "github:ryantm/agenix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix-rekey = {
-      url = "github:oddlama/agenix-rekey";
-      inputs.nixpkgs.follows = "nixpkgs";
+    secrets = {
+      url = "git+ssh://git@github.com/yhn-gh/sops-secrets.git?ref=main&shallow=1";
+      flake = false;
     };
 
     disko = {

@@ -1,17 +1,21 @@
 {
+  config,
+  ...
+}: {
+  sops.secrets."user-password".neededForUsers = true;
   users = {
     mutableUsers = false;
     users = {
       root = {
 	isSystemUser = true;
-	hashedPassword = "$y$j9T$BzUj2Dyj91ukm2YYcDq2z/$a0CVkoPv88lemfRUay5bmThyt1NQs6C3CDzYjkyJiZ/";
+	hashedPasswordFile = config.sops.secrets."user-password".path;
       };
 
       yhn = {
 	isNormalUser = true;
 	uid = 1000;
 
-	hashedPassword = "$y$j9T$BzUj2Dyj91ukm2YYcDq2z/$a0CVkoPv88lemfRUay5bmThyt1NQs6C3CDzYjkyJiZ/";
+	hashedPasswordFile = config.sops.secrets."user-password".path;
 
 	group = "yhn";
 	extraGroups = [

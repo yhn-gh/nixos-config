@@ -2,30 +2,19 @@
 , requireFile
 , stdenvNoCC
 , unzip
-, passwordFile
+, secrets
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "berkeley-mono";
   name = "Berkeley Mono";
 
-  src = requireFile rec {
-    name = "berkeley-mono-typeface-encrypted.zip";
-    sha256 = "0k1bs571vbrg10lglrmsq085c2sivmnnb39pnp00vv83b41dcb51";
-    message = ''
-    '';
-  };
+  src = "./";
 
   outputs = [ "out" "web" "variable" "variableweb" ];
 
-  nativeBuildInputs = [
-    unzip
-  ];
-
-  # requires --impure but whatever
   unpackPhase = ''
-    PASSWORD=${lib.readFile passwordFile} 
-    unzip -P $PASSWORD $src
+    cp -R ${secrets}/berkeley-mono-typeface/* $src
   '';
 
   installPhase = ''

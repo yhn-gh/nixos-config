@@ -3,7 +3,6 @@
   ...
 }: {
   imports = [
-    ./agenix.nix
     ./nixos.nix
   ];
 }

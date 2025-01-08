@@ -1,11 +1,11 @@
 {
   pkgs,
   config,
+  inputs,
   ...
 }: let
-  berkeley-mono = pkgs.callPackage ./berkeley-mono.nix { passwordFile = config.age.secrets.berkeley-mono.path; };
+  berkeley-mono = pkgs.callPackage ./berkeley-mono.nix { secrets = inputs.secrets; };
 in {
-  age.secrets.berkeley-mono.rekeyFile = ./berkeley-mono.age;
 
   fonts.packages = with pkgs; [
     berkeley-mono
