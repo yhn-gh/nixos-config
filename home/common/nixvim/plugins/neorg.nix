@@ -1,11 +1,21 @@
 {
   programs.nixvim = {
+    opts = {
+      conceallevel = 2;
+      concealcursor = "nc";
+    };
     keymaps = [
     {
       mode = "n";
       key = "<C-j>";
       action = "<cmd>Neorg toc<CR>";
     }
+    {
+      mode = "n";
+      key = "<leader>nj";
+      action = "<cmd>Neorg journal<CR>";
+    }
+
     ];
     plugins = {
 

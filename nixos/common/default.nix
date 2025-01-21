@@ -11,7 +11,6 @@
     ./packages.nix
     ./syncthing.nix
     ./python.nix
-    ./openssh.nix
     ./fonts
     ./tmpfiles.nix
     ./sops.nix

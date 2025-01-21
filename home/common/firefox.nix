@@ -66,6 +66,7 @@ width: 2px !important;
 	duckduckgo-privacy-essentials
 	multi-account-containers
 	onepassword-password-manager
+	yomitan
       ];
     };
     policies = {

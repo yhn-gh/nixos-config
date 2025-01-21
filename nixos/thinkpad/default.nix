@@ -17,7 +17,7 @@
     ./gamescope.nix
     ./xdg-portal-wlr.nix
 
-    ./wireguard
+    ./wireguard.nix
 
     ./tlp.nix
   ];

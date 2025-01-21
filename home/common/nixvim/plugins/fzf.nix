@@ -1,22 +1,34 @@
 {
   pkgs,
-  ...
+    ...
 }: {
   programs.nixvim = {
-    extraPlugins = with pkgs; [
-      vimPlugins.fzfWrapper
-    ];
+    plugins.fzf-lua = {
+      enable = true;
+      settings = {
 
-    globals = {
-      fzf_layout = { down = "20%"; };
+	winopts = {
+	  row = 1;
+	  height = 0.4;
+	  width = 1;
+	  border = false;
+	  preview = {
+	    # hidden = "hidden";
+	    horizontal = "right:50%";
+	    scrollbar = false;
+	  };
+	};
+      };
+
+      keymaps = {
+	"<C-f>" = "files";
+	"<C-g>" = {
+	  action = "live_grep";
+	  settings.winopts = {
+	    fullscreen = true;
+	  };
+	};
+      };
     };
-
-    keymaps = [
-    {
-      mode = "n";
-      key = "<C-f>";
-      action = "<cmd>FZF<cr>";
-    }
-    ];
   };
 }

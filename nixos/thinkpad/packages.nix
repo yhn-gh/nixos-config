@@ -2,17 +2,26 @@
   environment.systemPackages = with pkgs; [
     acpi
     light
+
     zathura
     pandoc
-    jellyfin-media-player
+
     bluez
+
     prismlauncher
+
+    ueberzugpp
+    tidal-dl
 
     grim
     slurp
+    satty
+
+    fzf
+
     wl-clipboard
+
     mako
     libnotify
-    satty
  ];
 }
