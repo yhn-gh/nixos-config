@@ -7,15 +7,14 @@
     keymaps = [
     {
       mode = "n";
-      key = "<C-j>";
-      action = "<cmd>Neorg toc<CR>";
+      key = "<localleader>nj";
+      action = "<cmd>Neorg journal<CR>";
     }
     {
       mode = "n";
-      key = "<leader>nj";
-      action = "<cmd>Neorg journal<CR>";
+      key = "<localleader>nr";
+      action = "<cmd>Neorg return<CR>";
     }
-
     ];
     plugins = {
 

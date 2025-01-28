@@ -14,6 +14,7 @@
 
     cmake
     ffmpeg-headless
+    wf-recorder
     lazygit
     fastfetch
     anki

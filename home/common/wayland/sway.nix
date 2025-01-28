@@ -4,6 +4,7 @@
   config,
   ...
 }: let
+  wallpaper = ./wallpaper.png;
   modifier = config.wayland.windowManager.sway.config.modifier;
   sattyConfig = ./satty.toml;
 in {
@@ -75,6 +76,7 @@ in {
 
       output = {
 	eDP-1 = {
+	  bg = "${wallpaper} fill";
 	  scale = "1.3";
 	};
       };

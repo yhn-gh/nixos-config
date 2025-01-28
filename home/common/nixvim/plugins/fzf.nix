@@ -22,7 +22,7 @@
 
       keymaps = {
 	"<C-f>" = "files";
-	"<C-g>" = {
+	"<C-F>" = {
 	  action = "live_grep";
 	  settings.winopts = {
 	    fullscreen = true;
