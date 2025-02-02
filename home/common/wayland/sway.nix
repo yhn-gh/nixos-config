@@ -40,7 +40,7 @@ in {
 	"${modifier}+Return" = "exec ${lib.getExe pkgs.alacritty}";
 	"${modifier}+q" = "kill";
 	"${modifier}+f" = "floating toggle";
-	"${modifier}+r" = "exec ${lib.getBin pkgs.bemenu}/bin/bemenu-run --bottom --ignorecase --prompt \"Run\" --fn \"Berkeley Mono\" 16 --list \"5 up\"";
+	"${modifier}+r" = "exec ${lib.getBin pkgs.bemenu}/bin/bemenu-run --bottom --ignorecase --prompt \"\" --fn \"Berkeley Mono\" 16 --list \"5 up\"";
 
 	"XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
