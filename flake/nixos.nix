@@ -53,5 +53,6 @@
       };
     in {
       "thinkpad" = mkHost "thinkpad";
+      "rae" = mkHost "rae";
     };
 }
