@@ -16,6 +16,7 @@
     ./zellij.nix
     ./alacritty.nix
     ./fontconfig.nix
+    ./mpv.nix
   ];
 
   programs = {

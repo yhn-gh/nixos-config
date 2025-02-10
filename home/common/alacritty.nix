@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       font = {
-	size = 13;
+	size = 14;
 	builtin_box_drawing = false;
       };
 

@@ -460,10 +460,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1737483834,
-        "narHash": "sha256-ISPmrSbtHIPQL6E0Zew8kurAOsG/v5BQ6/LuJwlDFZw=",
+        "lastModified": 1738785856,
+        "narHash": "sha256-gCph12o7BkwO0w4ffqGRi5Z0lAUUHNkV4xuu10aNHEg=",
         "ref": "main",
-        "rev": "0d9d982740c3e1219ef2e6d477e4fb890895252f",
+        "rev": "3d3691573a1ec78ed5eb24426049a3ec30eb0436",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/yhn-gh/sops-secrets.git"

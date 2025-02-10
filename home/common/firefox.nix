@@ -16,6 +16,9 @@ let
 in {
 
   programs.firefox = {
+    nativeMessagingHosts = [
+    pkgs.ff2mpv-rust
+    ];
     enable = true;
     profiles.yhn = {
       isDefault = true;
@@ -61,8 +64,7 @@ width: 2px !important;
 	ublock-origin
 	greasemonkey
 	tree-style-tab
-	auto-tab-discard
-	darkreader
+	ff2mpv
 	duckduckgo-privacy-essentials
 	multi-account-containers
 	onepassword-password-manager

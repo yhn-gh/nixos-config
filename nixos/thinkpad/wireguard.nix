@@ -16,8 +16,8 @@
     peers = [
       {
 	# HK #40
-	endpoint = "146.70.113.98:51820";
-	publicKey = "/AEriTfHYyrhW+bj1cDy9RroL4j4o1tv9sw4m+aB8lA=";
+	endpoint = "79.110.55.2:51820";
+	publicKey = "kwmJ9x2fBnD1PyYM9alhOW835krOfgVCr6ArMLA1pGk=";
 	allowedIPs = [ "0.0.0.0/0" ];
       }
     ];
