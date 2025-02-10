@@ -2,7 +2,7 @@
   disko.devices.disk.ssd = {
     type = "disk";
 
-    device = "/dev/nvme1n1";
+    device = "/dev/disk/by-id/nvme-SAMSUNG_MZVL4256HBJD-00BH1_S6B6NF0W532500";
     content = {
       type = "gpt";
       partitions = {

@@ -1,8 +1,33 @@
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
-  ./hardware.nix
-  ./disko.nix
-  ../common
+    ./hardware.nix
+    ./bootloader.nix
+    ../common
 
-  ]
+    ./disko.nix
+    ./wayland.nix
+    ./sound.nix
+
+    ./packages.nix
+    ./steam.nix
+  ];
+
+  networking.hostName = "rae";
+
+
+  system = {
+    autoUpgrade.enable = false;
+
+    stateVersion = "24.05";
+  };
+  
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
 }
