@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ./sway.nix
+    ./sway
     ./eww.nix
   ];
 

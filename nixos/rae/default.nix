@@ -13,6 +13,7 @@
     ./sound.nix
 
     ./packages.nix
+    ./nvidia.nix
     ./steam.nix
   ];
 
