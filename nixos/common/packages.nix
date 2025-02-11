@@ -18,5 +18,21 @@
     lazygit
     fastfetch
     anki
+
+
+    zathura
+    pandoc
+
+    ueberzugpp
+    tidal-dl
+
+    grim
+    slurp
+    satty
+
+    fzf
+    wl-clipboard
+    mako
+    libnotify
  ];
 }
