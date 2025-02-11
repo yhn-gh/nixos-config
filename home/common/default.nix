@@ -17,6 +17,7 @@
     ./alacritty.nix
     ./fontconfig.nix
     ./mpv.nix
+    ./packages.nix
   ];
 
   programs = {
@@ -34,14 +35,5 @@
       EDITOR = "nvim";
     };
 
-    packages = with pkgs; [
-      jq
-      fd
-
-      discord
-      
-      eza
-
-    ];
   };
 }

@@ -19,7 +19,6 @@
     fastfetch
     anki
 
-
     zathura
     pandoc
 
