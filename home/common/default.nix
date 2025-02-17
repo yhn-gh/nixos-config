@@ -16,6 +16,7 @@
     ./zellij.nix
     ./alacritty.nix
     ./fontconfig.nix
+    ./udiskie.nix
     ./mpv.nix
     ./packages.nix
   ];

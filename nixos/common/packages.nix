@@ -33,5 +33,6 @@
     wl-clipboard
     mako
     libnotify
+    
  ];
 }

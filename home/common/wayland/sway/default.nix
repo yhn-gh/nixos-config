@@ -7,6 +7,7 @@ in {
     ./keybindings.nix
     ./output.nix
     ./eww-bar.nix
+    ./floating.nix
   ];
 
   wayland.windowManager.sway = {

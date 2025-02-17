@@ -6,12 +6,26 @@
     enable = true;
   };
 
+  boot.kernelParams = [ "nvidia_drm.fbdev=1" "nvidia-drm.modeset=1" "module_blacklist=i915" ];
+
+  hardware.opengl = {
+    enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    libglvnd
+    libGL
+    egl-wayland
+  ];
+
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
 
+    forceFullCompositionPipeline = true;
     # Modesetting is required.
+
     modesetting.enable = true;
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
@@ -37,6 +51,7 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+package = config.boot.kernelPackages.nvidiaPackages.latest;
+    # package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 }

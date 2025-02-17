@@ -19,6 +19,7 @@
 	"*" = {
 	  xkb_layout = "kr";
 	  xkb_options = "korean:ralt_hangul";
+	  accel_profile = "flat";
 	};
       };
     };

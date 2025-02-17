@@ -18,7 +18,7 @@
 	};
       };
       extraOptions = [
-	"--my-next-gpu-wont-be-nvidia"
+	"--unsupported-gpu"
       ];
     };
   };

@@ -7,6 +7,7 @@
     inputs.disko.nixosModules.disko
 
     ./users.nix
+    ./udisks.nix
     ./fish.nix
     ./packages.nix
     ./syncthing.nix

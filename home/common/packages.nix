@@ -6,8 +6,8 @@
     packages = with pkgs; [
       fd
       gh
+      vesktop
       jq
-      discord
       eza
     ];
   };
