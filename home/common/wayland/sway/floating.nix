@@ -4,6 +4,9 @@
     {
       class = "steam";
     }
+    {
+      app_id = "mpv";
+    }
     ];
   };
 }
