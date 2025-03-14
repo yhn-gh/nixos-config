@@ -21,6 +21,7 @@ in {
     ];
     enable = true;
     profiles.yhn = {
+      settings."s.webextensions.ExtensionStorageIDB.enabled" = false;
       isDefault = true;
       search = {
 	default = "DuckDuckGo";
@@ -60,16 +61,38 @@ width: 2px !important;
 }
       '';
 
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-	ublock-origin
-	greasemonkey
-	tree-style-tab
-	ff2mpv
-	duckduckgo-privacy-essentials
-	multi-account-containers
-	onepassword-password-manager
-	yomitan
-      ];
+      extensions = {
+	packages = with pkgs.nur.repos.rycee.firefox-addons; [
+	  ublock-origin
+	  greasemonkey
+	  tree-style-tab
+	  ff2mpv
+	  duckduckgo-privacy-essentials
+	  multi-account-containers
+	  onepassword-password-manager
+	  yomitan
+	];
+      };
+      settings = {
+	"treestyletab@piro.sakura.ne.jp".settings = {
+	  style = "photon";
+	  optionsExpandedSections = ["section-addons" "section-newTabWithOwner"];
+	};
+	"uBlock0@raymondhill.net".settings = {
+	  selectedFilterLists = [
+	    "user-filters"
+	    "ublock-filters"
+	    "ublock-badware"
+	    "ublock-privacy"
+	    "ublock-unbreak"
+	    "ublock-quick-fixes"
+	    "easylist"
+	    "easyprivacy"
+	    "urlhaus-1"
+	    "plowe-0"
+	  ];
+	};
+      };
     };
     policies = {
       DisablePocket = true;

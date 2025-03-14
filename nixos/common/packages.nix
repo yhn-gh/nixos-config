@@ -6,6 +6,7 @@
     openssl
 
     atop
+    btop
 
     gcc
 

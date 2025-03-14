@@ -13,6 +13,7 @@
     config = {
       startup = [
       { command = "${lib.getBin pkgs.kime}/bin/kime-wayland"; }
+      { command = "${lib.getBin pkgs.kime}/bin/kime-xim"; }
       ];
 
       input = {

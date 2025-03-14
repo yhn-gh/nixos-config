@@ -15,7 +15,7 @@
     ./fonts
     ./tmpfiles.nix
     ./sops.nix
-  ];
+ ];
 
   nixpkgs.config.allowUnfree = true;
   nix.settings = {
