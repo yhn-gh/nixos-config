@@ -16,6 +16,7 @@
     ./nvidia.nix
     ./steam.nix
     ./avahi.nix
+    ./wireguard.nix
   ];
 
   networking.hostName = "rae";

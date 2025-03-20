@@ -7,7 +7,7 @@
 	host = "gitlab.com github.com";
 	identitiesOnly = true;
 	identityFile = [
-	  "/etc/ssh/ssh_host_ed25519_key"
+	  "~/.ssh/id_ed25519"
 	];
       };
     };

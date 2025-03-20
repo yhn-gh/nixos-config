@@ -15,7 +15,6 @@
     ./fonts
     ./tmpfiles.nix
     ./sops.nix
-    ./wireguard.nix
  ];
 
   nixpkgs.config.allowUnfree = true;

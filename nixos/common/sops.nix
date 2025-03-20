@@ -20,7 +20,8 @@ in {
     };
 
     secrets = {
-      wireguard-privkey = { };
+      "wireguard-privkey/thinkpad" = { };
+      "wireguard-privkey/rae" = { };
       user-password = { };
     };
   };

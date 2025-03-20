@@ -16,6 +16,7 @@
     ./retroarch.nix
     ./gamescope.nix
     ./xdg-portal-wlr.nix
+    ./wireguard.nix
 
     ./tlp.nix
   ];
