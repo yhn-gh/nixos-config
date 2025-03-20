@@ -15,6 +15,7 @@
     ./packages.nix
     ./nvidia.nix
     ./steam.nix
+    ./avahi.nix
   ];
 
   networking.hostName = "rae";

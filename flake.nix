@@ -34,7 +34,7 @@
     };
 
     secrets = {
-      url = "git+https://github.com/yhn-gh/sops-secrets.git?ref=main&shallow=1";
+      url = "git+ssh://git@github.com/yhn-gh/sops-secrets.git?ref=main&shallow=1";
       flake = false;
     };
 

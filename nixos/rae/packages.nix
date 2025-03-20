@@ -5,5 +5,7 @@
     arduino-cli
     arduino-ide
     kicad
+    uxplay
+    telegram-desktop
  ];
 }

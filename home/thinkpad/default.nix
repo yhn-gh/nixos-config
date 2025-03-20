@@ -7,7 +7,6 @@
   imports = [
     ../common
     ./packages.nix
-    ./ssh.nix
   ];
 
   myModules.sway = {

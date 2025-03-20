@@ -329,19 +329,19 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1738785856,
-        "narHash": "sha256-gCph12o7BkwO0w4ffqGRi5Z0lAUUHNkV4xuu10aNHEg=",
+        "lastModified": 1742457229,
+        "narHash": "sha256-+FMazsynBGp60HrDXUVEhokEM54KFeGZZizPW8EZMyY=",
         "ref": "main",
-        "rev": "3d3691573a1ec78ed5eb24426049a3ec30eb0436",
+        "rev": "15589252e1bacfe5f8e466d94c415e7daf0e726c",
         "shallow": true,
         "type": "git",
-        "url": "https://github.com/yhn-gh/sops-secrets.git"
+        "url": "ssh://git@github.com/yhn-gh/sops-secrets.git"
       },
       "original": {
         "ref": "main",
         "shallow": true,
         "type": "git",
-        "url": "https://github.com/yhn-gh/sops-secrets.git"
+        "url": "ssh://git@github.com/yhn-gh/sops-secrets.git"
       }
     },
     "sops-nix": {

@@ -19,6 +19,8 @@
     ./udiskie.nix
     ./mpv.nix
     ./packages.nix
+    ./zoxide.nix
+    ./ssh.nix
   ];
 
   programs = {
