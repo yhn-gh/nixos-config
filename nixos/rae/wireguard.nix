@@ -3,7 +3,7 @@
   ...
 }: {
   sops.secrets = {
-    "wireguard-privkey"."rae" = {
+    "wireguard-privkey/rae" = {
       owner = config.users.users.yhn.name;
       inherit (config.users.users.yhn) group;
     };
@@ -12,7 +12,7 @@
   networking.wg-quick.interfaces.wg0 = {
     address = [ "10.2.0.2/32" ];
     #dns = [ "10.2.0.1" ];
-    privateKeyFile = config.sops.secrets."wireguard-privkey"."rae".path;
+    privateKeyFile = config.sops.secrets."wireguard-privkey/rae".path;
     peers = [
       {
 	# HK #40

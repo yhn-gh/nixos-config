@@ -7,5 +7,6 @@
     kicad
     uxplay
     telegram-desktop
+    vesktop
  ];
 }
